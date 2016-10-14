@@ -1,0 +1,121 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "package:angular2/core.dart",
+        "5": false
+      },
+      {
+        "1": "package:angular2/router.dart",
+        "5": false
+      },
+      {
+        "1": "../model/user.dart",
+        "5": false
+      },
+      {
+        "1": "../service/auth.service.dart",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "SignInComponent",
+        "5": [
+          {
+            "1": "Router",
+            "4": "_router"
+          },
+          {
+            "1": "AuthService",
+            "4": "_authService"
+          }
+        ]
+      }
+    ],
+    "6": "sign-in.component.dart"
+  },
+  "type": {
+    "SignInComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "sign-in",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "SignInComponent",
+        "moduleUrl": "asset:kudos/lib/component/sign-in.component.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": [
+          {
+            "token": {
+              "value": null,
+              "identifier": {
+                "class": "Identifier",
+                "name": "Router",
+                "moduleUrl": null,
+                "prefix": null,
+                "value": null
+              },
+              "identifierIsInstance": false
+            },
+            "query": null,
+            "viewQuery": null,
+            "value": null,
+            "isAttribute": false,
+            "isSelf": false,
+            "isHost": false,
+            "isSkipSelf": false,
+            "isOptional": false,
+            "isValue": false
+          },
+          {
+            "token": {
+              "value": null,
+              "identifier": {
+                "class": "Identifier",
+                "name": "AuthService",
+                "moduleUrl": null,
+                "prefix": null,
+                "value": null
+              },
+              "identifierIsInstance": false
+            },
+            "query": null,
+            "viewQuery": null,
+            "value": null,
+            "isAttribute": false,
+            "isSelf": false,
+            "isHost": false,
+            "isSkipSelf": false,
+            "isOptional": false,
+            "isValue": false
+          }
+        ]
+      },
+      "changeDetection": 5,
+      "inputs": {},
+      "outputs": {},
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [],
+      "template": {
+        "encapsulation": 2,
+        "template": "<div class=\"row\" style=\"margin-top: 64px;\">\n\t<div class=\"col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 z-depth-1\" style=\"padding-left: 16px; padding-right: 16px; padding-bottom: 16px;\">\n\t\t<img class=\"img img-responsive\" src=\"assets/kudos.png\">\n\t\t<div *ngIf=\"errorMessage\" class=\"alert alert-danger\" role=\"alert\">\n\t\t\t{{ errorMessage }}\n\t\t</div>\n\t\t<form #signInForm=\"ngForm\" (ngSubmit)=\"signIn()\">\n\t\t\t<div class=\"form-group\">\n\t\t\t\t<label>Username</label>\n\t\t\t\t<input [(ngModel)]=\"model.username\" name=\"username\" type=\"text\" class=\"form-control\">\n\t\t\t</div>\n\t\t\t<div class=\"form-group\">\n\t\t\t\t<label>Password</label>\n\t\t\t\t<input [(ngModel)]=\"model.password\" name=\"password\" type=\"password\" class=\"form-control\">\n\t\t\t</div>\n\t\t\t<button type=\"submit\" class=\"btn btn-block btn-lg btn-success\">Sign In</button>\n\t\t</form>\n\t</div>\n</div>\n<div class=\"row\" style=\"margin-top: 24px;\">\n\t<div class=\"text-center\"><a href=\"#\">Create account</a></div>\n</div>",
+        "templateUrl": "asset:kudos/lib/component/sign-in.component.html",
+        "styles": [],
+        "styleUrls": [],
+        "ngContentSelectors": []
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    }
+  },
+  "alias": {}
+}
