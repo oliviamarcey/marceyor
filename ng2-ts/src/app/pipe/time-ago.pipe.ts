@@ -28,7 +28,7 @@ debugger;
 ];
 var seconds = (+new Date() - value) / 1000,
     token = 'ago', list_choice = 1;
-
+debugger;
 if (value == null || seconds == 0) {
     return 'Just now'
 }
@@ -39,13 +39,14 @@ if (seconds < 0) {
 }
 
 var i = 0, format:any;
-while (format = time_formats[i++])
+while (format = time_formats[i++]) {
     if (seconds < format[0]) {
         if (typeof format[2] == 'string')
             return format[list_choice];
         else
             return Math.floor(seconds / format[2]) + ' ' + format[1] + ' ' + token;
     }
+}
 return value;
 
    

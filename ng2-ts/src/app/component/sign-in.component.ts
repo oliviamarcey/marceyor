@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { User } from '../model/user';
@@ -18,28 +18,27 @@ export class SignInComponent {
         this.model = new User();
 	 }
 
-    signIn() {
+   signIn() {
       this.loading = true;
       this.errorMessage = null;
-      setTimeout(() => { 
-              this.authService.signIn(this.model)
-                  .subscribe((result:User) => {
-                    this.loading = false;
-                     if (result) {
-                       this.router.navigate(['']);
-                     }
+       
+       this.authService.signIn(this.model)
+            .subscribe((result:User) => {
+              this.loading = false;
+              if (result) {
+                 this.router.navigate(['']);
+              }
             },
             (err: any) => {
               this.loading = false;
               if (err.status == 401) {
                 this.errorMessage = "Invalid username or password";
               }  
-            });
-      }, 1000);
+       });
     }
 
     signUp() {
-        this.router.navigate(['sign-up']);
+        this.router.navigateByUrl('sign-up');
     }
 
 }

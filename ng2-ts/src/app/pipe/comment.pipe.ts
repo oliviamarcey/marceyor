@@ -14,8 +14,8 @@ export class CommentPipe {
     	return value.filter((activity:Activity) => {
       	return activity.type == 'COMMENT';
     	});
-	} else {
-		return null;
+	  } else {
+		  return null;
   	}
-}
+  }
 }

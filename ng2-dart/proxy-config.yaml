@@ -1,0 +1,8 @@
+    host: localhost
+    port: 6600
+
+    proxys:
+        - /rest http://localhost:8080/kudos
+
+    docRoot:  ./build/web
+    defaultDoc: index.html

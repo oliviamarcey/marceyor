@@ -10,7 +10,6 @@ import { AuthService } from '../service/auth.service';
 import { UserService } from '../service/user.service';
 import { ActivityService } from '../service/activity.service';
 
-
 @Component({
     selector: 'home',
     templateUrl: './home.component.html'
@@ -43,13 +42,7 @@ export class HomeComponent implements OnInit {
 		});
 
 		this.loadKudos();
-		this.resetForm();;
-
-		this.userService.getUsers()
-			.subscribe((response:User[]) => {
-				this.loading = false;
-				this.users = response;
-		});
+		this.resetForm();
 	}
 
 	addKudos() {   

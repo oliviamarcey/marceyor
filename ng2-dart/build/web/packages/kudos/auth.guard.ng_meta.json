@@ -118,6 +118,13 @@
           "isValue": false
         }
       ]
+    },
+    "canActivateFn": {
+      "class": "Identifier",
+      "name": "canActivateFn",
+      "moduleUrl": "asset:kudos/lib/auth.guard.dart",
+      "prefix": null,
+      "value": null
     }
   },
   "alias": {}
